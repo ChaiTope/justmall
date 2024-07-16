@@ -1,0 +1,255 @@
+
+*{box-sizing: border-box;}
+
+
+        /********************HEADER*********************/
+
+        body{
+            padding: 0 15% 0 15%;
+            background-color: #00B1B0;
+        }
+
+        header{
+            margin: 0;
+            padding: 0;
+            height: 100px;
+            text-align: center;
+            background-color: cornflowerblue;
+            color: #000;
+            border: 3px solid cornflowerblue;
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        /********************LOGO**********************/
+
+
+        header .logo{
+            width: 200px;
+            height: 40px;
+            border: 1px solid #333;
+            margin: 30px 0 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+        header .logo-icon{
+            height: 30px;
+        }
+        header .just{
+            margin: 0;
+            padding: 0;
+            color: blueviolet;
+
+        }
+        header .mall{
+            margin: 0;
+            padding: 0;
+            color: yellow;
+        }
+
+
+        /****************MAIN MENU****************/
+
+
+
+    header .mainmenu{
+        width: 100%;
+        max-width: 800px;
+        height: 100px;
+        border: 2px solid blueviolet;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        overflow: hidden;
+        position: relative;
+        z-index: 10;
+    }
+    header .main-box{
+        color: blueviolet;
+        width: 150px;
+        height: 100px;
+        border: 2px solid green;
+    }
+    
+
+    header .main-box:hover{
+        background-color: blueviolet;
+        color: yellow;
+
+    }
+
+
+    /****************SUB MENU****************/
+
+    .sub-col{
+        float: left;
+        width:20%;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .sub-col h2{
+        font-size:20px;
+    }
+    .sub-navi{
+        width:600px;
+        float: right;
+        top:100px;
+        transform:scaleY(0);
+        transform-origin: top; /* 요소가 위에서 아래로 펼쳐지도록 설정 */
+        transition: transform 700ms;
+        z-index: 20;
+        background-color: white;
+        
+        position: absolute;
+        
+    }
+   .main-container:hover .sub-navi{
+        transform:scaleY(1);
+    } 
+    ul.ul-subnav{
+        list-style:none;
+        padding:0;
+        margin:0;
+    }
+    .ul-subnav a{
+        color:#666;
+        display:block;
+        line-height:40px;
+    }
+    .ul-subnav a:hover{
+        color:#00B1B0;
+    }
+    
+
+    /***********MAIN IMAGE*************/
+
+.hero{
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height: 470px;
+}
+.hero-img{
+    width: 100%;
+    height: 470px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1;
+    
+}
+.hero-img img{
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+}
+.hero-text{
+    position: absolute;
+    z-index: 2;
+    top: 70px;
+    left: 100px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.small-text{
+    margin: 10px;
+    font-size: 60px;
+    font-weight: 500;
+}
+.big-text{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    font-size: 120px;
+    font-weight: 700;
+}
+
+
+    /***********MAIN MIDDLE*************/
+
+
+
+    .main-mid{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 300px;
+        background-color: tan;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main-mid .middle{
+        width: 30%;
+        height: 100%;
+        background-color: white;
+        border: 1px solid #333;
+    }
+
+    .main-mid .right{
+        width: 30%;
+        height: 100%;
+        background-color: white;
+        border: 1px solid #333;
+    }
+
+
+/*****************공지사항********************/
+/*****************MID-LEFT********************/
+
+.main-mid .left{
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid #333;
+}
+.tab-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.tab-menu .tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+}
+
+.tab-menu .tab.active {
+    background-color: #ccc;
+    border-bottom: 1px solid white;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+.tab-pane ul.text {
+    width: 60%;
+    padding-left: 0px;
+    list-style: disc;
+    list-style-position: inside;
+    float: left;
+}
+
+.tab-pane ul.text li {
+    padding: 10px;
+    font-weight: 700;
+}
+
+.tab-pane ul.date {
+    width: 40%;
+    padding-left: 30px;
+    list-style: none;
+    float: left;
+}
+
+.tab-pane ul.date li {
+    padding: 10px;
+}
+
+
+/*****************이벤트창********************/
+/*****************MID-MIDDLE********************/
